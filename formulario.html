@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="index.html" method="">
+        <!--
+            <label>: Etiqueta que nos sirve para asignar un mensaje, indicacion
+            input:
+                type= text, number, radio, checkbox, date, time, password, email, file, button, submit
+                    datetime-local, reset, image
+
+                type radio: se selecciona una unica opcion
+                type checkbox: se pueden seleccionar varias opciones
+            ol, ul
+            button
+            select
+            <br>: saltos de linea
+        -->
+        <br>
+        <label for="">Nombre Completo:</label>
+        <input type="text" placeholder="Ingresa tu nombre completo">
+        <br>
+        <label for="">Telefono</label>
+        <input type="number" placeholder="Ingresa tu numero de telefono">
+        <br>
+        <label for="">Edad</label>
+        <input type="number" placeholder="Ingresa tu edad">
+        <br>
+        <!-- asignando lista ordenada -->
+        <label for="">Selecciona tus hobbies</label>
+        <ol>
+            <li><input type="checkbox"> Ver anime</li>
+            <li><input type="checkbox"> Leer Libros</li>
+            <li><input type="checkbox"> Jugar Fultbol</li>
+            <li><input type="checkbox"> Cocinar</li>
+            <li><input type="checkbox"> Programar</li>
+        </ol>
+        <label for="">Seleccion Genero</label>
+        <input type="radio" name="genero">M
+        <input type="radio" name="genero">F
+        <br>
+        <label for="">¿En que area trabajas?</label>
+        <select name="" id="">
+            <option value="Educacion">Educacion</option>
+            <option value="Medicina">Medicina</option>
+            <option value="Informatica">Informatica</option>
+            <option value="Deporte">Deporte</option>
+        </select>
+        <br>
+        <label for="">Usuario</label>
+        <input type="text" placeholder="Ingrese su usuario">
+        <br>
+        <label for="">Contraseña</label>
+        <input type="password" placeholder="Ingrese su contraseña">
+        <br>
+        <label for="">Fecha de nacimiento</label>
+        <input type="date"><br>
+        <label for="">Foto de perfil</label>
+        <input type="file"><br>
+        <!-- tipos de botones -->
+        <button>Agregar Usuario</button> <!-- no genera ningun tipo de accion, hasta que nosotros le indiquemos -->
+        <input type="reset"> <!-- genera la accion de restablecer los input a como estaban al principio -->
+        <input type="submit"> <!-- hace referencia al apartado del action del formulario -->
+    </form>
+    <tbody>
+        <tr>
+            <td>Maria Chacon</td>
+            <td>Honduras</td>
+        </tr>
+        <tr>
+            <td>Juan Alvarez</td>
+            <td>Colombia</td>
+        </tr>
+        <tr>
+            <td>Kevin Ramirez</td>
+            <td>Colombia</td>
+        </tr>
+        <tr>
+            <td>Katherine Soliz</td>
+            <td>Guatemala</td>
+        </tr>
+    </tbody>
+    <table border="1" cellpadding="6" cellspacing="0">
+        <!--
+            encabezado: <thead>
+            contenido principal: <tbody>
+            pie de pagina: <tfoot>
+            celdas o columnas: <td>
+            filas: <tr>
+
+            Propiedades de la tabla:
+            -cellpadding: Sirve para el espacio del contenido y la celda
+            -cellspacing: Sirve para el espaciado del border
+            -rowspan: Sirve para unir filas
+            -colspan: Sirve para unir celdas (columnas)
+        -->
+        <thead>
+            <th>Nombre Completo</th>
+            <th>Pais</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Maria Chacon</td>
+                <td>Honduras</td>
+            </tr>
+            <tr>
+                <td>Juan Alvarez</td>
+                <td rowspan="2">Colombia</td>
+            </tr>
+            <tr>
+                <td>Kevin Ramirez</td>
+            </tr>
+            <tr>
+                <td>Katherine Soliz</td>
+                <td>Guatemala</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <!-- uniendo 2 celdas 
+                    <b>: da formato en negrita los valores
+                    <i>: da formato en cursiva (italic)
+                -->
+                <td colspan="2"><b><i>Kenia 2023</i></b></td>
+            </tr>
+        </tfoot>
+    </table>
+    <h2>Trabajando con listas</h2>
+    <!--
+        datalist: Genera una lista con multiples de opciones
+    -->
+    <input list="cursos">
+    <datalist id="cursos">
+        <option value="HTML"></option>
+        <option value="CSS"></option>
+        <option value="JavaScript"></option>
+        <option value="React JS"></option>
+    </datalist>
+
+    <h2>Trabajando con detalles</h2>
+    <!--
+        details: Especifica detalles adicionales de un contenido
+        summary: Especifica el titulo de los detalles
+    -->
+    <details>
+        <summary>HTML</summary>
+        <p>Es un curso que te va servir para estructuras paginas web</p>
+    </details>
+    <!--
+        <figure> Se utiliza como contenedor donde podemos colocar imagenes,
+            archivos, videos, codigo
+        figcaption: Se utiliza para asignar el titulo de figure
+    -->
+    <figure>
+        <img src="./lugares-visitar-uk.gif" alt="lugares">
+        <figcaption>Lugares Turisticos</figcaption>
+    </figure>
+</body>
+</html>
